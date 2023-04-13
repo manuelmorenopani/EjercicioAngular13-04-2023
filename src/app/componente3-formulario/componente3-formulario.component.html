@@ -1,0 +1,37 @@
+
+    <h1>Formulario de Contacto</h1>
+
+        <label for="email">Correo electrónico:</label><input type="email" [(ngModel)]="correo" id="email" name="email" required><br>
+        <br>
+
+        <label for="direccion">Dirección:</label><br>
+        <textarea id="direccion" [(ngModel)]="direccion" name="direccion" rows="4" cols="50"></textarea><br>
+        <br>
+
+        <label for="telefono">Teléfono:</label><input type="tel"  [(ngModel)]="telefono" id="telefono" name="telefono"><br>
+        <br>
+
+        <label for="ciudad">Ciudad:</label><select id="ciudad" name="ciudad" [(ngModel)]="ciudad">
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Malaga">Málaga</option>
+            </select><br><br>
+
+        <label>Forma de Pago:</label><br>
+
+        <input type="radio" id="efectivo" name="forma-pago" value="efectivo" [(ngModel)]="formapago">
+        <label for="efectivo">Efectivo</label><br>
+        <input type="radio" id="tarjeta" name="forma-pago" value="tarjeta" [(ngModel)]="formapago">
+        <label for="tarjeta">Tarjeta</label><br>
+        <input type="radio" id="contra-reembolso" name="forma-pago" value="contra-reembolso" [(ngModel)]="formapago">
+        <label for="contra-reembolso">Contra-Reembolso</label><br><br>
+
+        <input type="checkbox" id="acepta" name="acepta" required [(ngModel)]="terminos">
+        <label for="acepta">Acepto los términos y condiciones.</label><br><br>
+
+        <input type="submit" value="Enviar" (click)="pulsar()">
+
+        <p>Tus datos son:{{mensaje}}</p>
+
+      
+
